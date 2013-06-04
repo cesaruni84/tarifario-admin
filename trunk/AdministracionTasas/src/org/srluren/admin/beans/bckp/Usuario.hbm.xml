@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/10/2012 01:48:08 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="org.srluren.admin.beans.hb">
+    <class name="Usuario" table="Usuario" catalog="DBINTRANET">
+        <id name="idUsuario" type="java.lang.Integer">
+            <column name="idUsuario" />
+            <generator class="increment" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="Nombre" length="50" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="Apellido" length="50" />
+        </property>
+        <property name="codigo" type="string">
+            <column name="Codigo" length="15" not-null="true" />
+        </property>
+        <property name="clave" type="string">
+            <column name="Clave" length="256" not-null="true" />
+        </property>
+        <property name="rol" type="string">
+            <column name="Rol" length="20" />
+        </property>
+        <property name="estado" type="string">
+            <column name="Estado" length="10" />
+        </property>
+        <property name="fechaReg" type="date">
+            <column name="FechaReg" length="10" />
+        </property>
+        <property name="fechaAct" type="date">
+            <column name="FechaAct" length="10" />
+        </property>
+        <property name="fechaEli" type="date">
+            <column name="FechaEli" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

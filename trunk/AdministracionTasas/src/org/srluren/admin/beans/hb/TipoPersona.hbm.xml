@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/10/2012 01:48:08 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="org.srluren.admin.beans.hb">
+    <class name="TipoPersona" table="TipoPersona" catalog="DBTARIFARIO">
+        <id name="idTipoPersona" type="java.lang.Integer">
+            <column name="idTipoPersona" />
+            <generator class="increment" />
+        </id>
+        <property name="descriptiva" type="string">
+            <column name="Descriptiva" length="50" not-null="true" />
+        </property>
+        <property name="nemonico" type="string">
+            <column name="Nemonico" length="10" not-null="true" />
+        </property>
+        <property name="fechaReg" type="date">
+            <column name="FechaReg" length="10" />
+        </property>
+        <property name="fechaAct" type="date">
+            <column name="FechaAct" length="10" />
+        </property>
+        <property name="fechaEli" type="date">
+            <column name="FechaEli" length="10" />
+        </property>
+        <set name="tasas" table="Tasa" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idTipoPersona" not-null="true" />
+            </key>
+            <one-to-many class="Tasa" />
+        </set>
+    </class>
+</hibernate-mapping>
