@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/10/2012 01:48:08 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="org.srluren.admin.beans.hb">
+    <class name="Tasa" table="Tasa" catalog="DBTARIFARIO">
+        <id name="idTasa" type="java.lang.Integer">
+            <column name="idTasa" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="moneda" class="Moneda" fetch="select">
+            <column name="idMoneda" not-null="true" />
+        </many-to-one>
+        <many-to-one name="subProductos" class="SubProducto" fetch="select">
+            <column name="idSubProducto" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tipoPersona" class="TipoPersona" fetch="select">
+            <column name="idTipoPersona" not-null="true" />
+        </many-to-one>
+        <property name="mtoInicial" type="long">
+            <column name="MtoInicial" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="mtoFinal" type="long">
+            <column name="MtoFinal" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="valTasaMin" type="big_decimal">
+            <column name="ValTasaMin" precision="4" not-null="true" sql-type="numeric(4,2)" />
+        </property>
+        <property name="valTasaMax" type="big_decimal">
+            <column name="ValTasaMax" precision="4" not-null="true" sql-type="numeric(4,2)" />
+        </property>
+        <property name="plazoInicial" type="java.lang.Integer">
+            <column name="PlazoInicial" />
+        </property>
+        <property name="plazoFinal" type="java.lang.Integer">
+            <column name="PlazoFinal" />
+        </property>
+        <property name="descripcionPlazo" type="string">
+            <column name="DescripcionPlazo" length="50" not-null="true" />
+        </property>
+        <property name="unidadPlazo" type="java.lang.Integer">
+            <column name="UnidadPlazo" />
+        </property>
+        <property name="rango" type="java.lang.Integer">
+            <column name="Rango" />
+        </property>
+        <property name="fechaReg" type="date">
+            <column name="FechaReg" length="10" />
+        </property>
+        <property name="fechaAct" type="date">
+            <column name="FechaAct" length="10" />
+        </property>
+        <property name="fechaEli" type="date">
+            <column name="FechaEli" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

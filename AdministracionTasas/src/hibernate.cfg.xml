@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		
+		<!-- Parámetros de conexión a la base de datos SQL Server2008  -->
+		<property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+		<property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=DBINTRANET</property>
+		<property name="hibernate.connection.username">usrluren</property>
+		<property name="hibernate.connection.password">12345678</property>
+		<property name="hibertnate.show_sql">true</property>
+		<property name="hibernate.default_schema">dbo</property>
+	    <property name="current_session_context_class">thread</property>
+	    	
+		<!-- Aqui referenciamos todos mapping files -->
+		<mapping resource="org/srluren/admin/beans/hb/Moneda.hbm.xml"/>
+		<mapping resource="org/srluren/admin/beans/hb/Producto.hbm.xml"/>
+		<mapping resource="org/srluren/admin/beans/hb/SubProducto.hbm.xml"/>
+		<mapping resource="org/srluren/admin/beans/hb/Tasa.hbm.xml"/>
+		<mapping resource="org/srluren/admin/beans/hb/TipoPersona.hbm.xml"/>
+		<mapping resource="org/srluren/admin/beans/hb/Usuario.hbm.xml"/>
+		
+	</session-factory>
+</hibernate-configuration>
+
