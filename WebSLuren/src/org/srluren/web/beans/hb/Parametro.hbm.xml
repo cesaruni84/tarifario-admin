@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27/03/2013 12:17:29 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="org.srluren.web.beans.hb">
+    <class name="Parametro" table="Parametro" catalog="DBTARIFARIO">
+        <id name="idParametro" type="java.lang.Integer">
+            <column name="idParametro" />
+            <generator class="increment" />
+        </id>
+        <property name="tipoPar" type="string">
+            <column name="tipoPAR" length="50" />
+        </property>
+        <property name="valorPar" type="string">
+            <column name="valorPAR" length="50" />
+        </property>
+        <property name="descrPar" type="string">
+            <column name="descrPAR" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

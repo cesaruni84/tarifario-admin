@@ -1,0 +1,290 @@
+@charset "utf-8";
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.text {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #626262;
+	text-decoration: none;
+	text-align: left;
+}.text_9 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #393c90;
+	text-decoration: none;
+	text-align: left;
+}
+.text_10 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #626262;
+	text-decoration: none;
+	text-align: left;
+}
+.text_i {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #626262;
+	text-decoration: none;
+	text-align: left;
+	font-style: italic;
+}
+.text_9b {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #a2a2a2;
+	text-decoration: none;
+	text-align: left;
+}
+.textb {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #474747;
+	text-decoration: none;
+	text-align: left;
+}
+
+.text_9c {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #626262;
+	text-decoration: none;
+	text-align: left;
+}
+.text_16 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #626262;
+	text-decoration: none;
+	text-align: left;
+	font-weight: bold;
+}
+.text_16_i {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #626262;
+	text-decoration: none;
+	text-align: left;
+	font-style: italic;
+	font-weight: bold;
+}
+.text_18 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #60609f;
+	text-decoration: none;
+	text-align: left;
+	font-weight: bold;
+}
+.textc {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #080808;
+	text-decoration: none;
+	text-align: left;
+}
+.textcd {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #393c90;
+	text-decoration: none;
+	text-align: left;
+}
+.textce {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #9B9B9B;
+	text-decoration: none;
+	text-align: left;
+}
+.text_tit_ahorros {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #8cba03;
+	text-decoration: none;
+	text-align: left;
+}
+
+.text_tit_prestamos {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666;
+	text-decoration: none;
+	text-align: left;
+}
+
+.text_18_ahorros {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #99cc00;
+	text-decoration: none;
+	text-align: left;
+	font-weight: bold;
+}
+.text_9_ahorros {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #99cc00;
+	text-decoration: none;
+	text-align: left;
+}
+
+.text_14 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #474747;
+	text-decoration: none;
+	text-align: left;
+	font-weight: bold;
+}
+.text_18_prestamos {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #666666;
+	text-decoration: none;
+	text-align: left;
+	font-weight: bold;
+}
+
+.text-tarjeta {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #535353;
+	text-decoration: none;	
+}
+
+.text_18_tarjeta {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #666666;
+	text-decoration: none;
+	text-align: left;
+	font-weight: bold;
+}
+
+.text_9_prestamos {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #666666;
+	text-decoration: none;
+	text-align: left;
+}
+
+.text_9_tarjeta {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #666666;
+	text-decoration: none;
+	text-align: left;
+}
+.text_tit_servicios {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #00aeef;
+	text-decoration: none;
+	text-align: left;
+}
+.text_tit_contenido {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666;
+	text-decoration: none;
+	text-align: left;
+}
+.text_tit_conocenos {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #ff9900;
+	text-decoration: none;
+	text-align: left;
+}
+.text_18_conocenos {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #ff9900;
+	text-decoration: none;
+	text-align: left;
+	font-weight: bold;
+}
+
+.text_18_servicios {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #00aeef;
+	text-decoration: none;
+	text-align: left;
+	font-weight: bold;
+}
+
+
+.text_9_servicios {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #00aeef;
+	text-decoration: none;
+	text-align: left;
+}
+
+.text_9_conocenos {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #ff9900;
+	text-decoration: none;
+	text-align: left;
+}
+
+.celda{
+	background-color:#F5F5F5;
+	height:22px;
+
+} 
+
+.celda2{
+	background-color:#cccccc;
+
+} 
+
+.celda3{
+	background-color:#FFFFFF;
+	height:22px;
+
+} 
+
+.celda4{
+	background-color:#FFFFFF;	
+
+} 
+
+.celda5{
+	background-color:#cccccc;
+	height:1px;
+} 
+
+.celda6 { padding-top:5px; padding-bottom:5px;}
+
+
+A.text:link { color:#626262;text-decoration: none }
+A.text:hover { color:#626262; text-decoration:underline}.
+
+A.text_9:link { color:#393c90;text-decoration: none }
+A.text_9:hover { color:#ff9900; text-decoration:underline}.
+
+A.text_9b:link { color:#a2a2a2;text-decoration: none }
+A.text_9b:hover { color:#a2a2a2; text-decoration:underline}.
+
+
+A.textce:link { color:#9B9B9B;text-decoration: none }
+A.textce:hover { color:#9B9B9B; text-decoration:underline}.
+
+A.textb:link { color:#474747;text-decoration: none }
+A.textb:hover { color:#626262; text-decoration:underline}.
+
+A.textcd:link { color:#393c90;text-decoration: none }
+A.textcd:hover { color:#9B9B9B; text-decoration:underline}.
+
+A.text_tit_conocenos:link { color:#ff9900;text-decoration: none }
+A.text_tit_conocenos:hover { color:#ff9900; text-decoration:underline}.
