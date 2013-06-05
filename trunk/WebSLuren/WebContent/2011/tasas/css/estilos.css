@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	/*margin:20px 0 0 20px ;
+	padding:0px 0px 0px 0px;
+	font-family:Calibri, Arial,Times New Roman;
+	font-size:12px;
+	text-align:justify;*/
+	margin:20px 0 0 20px ;
+	padding:0px 0px 0px 0px;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:12px;
+	color:#626262;
+	
+	text-align:justify;
+	
+	
+	
+	/*color:#626262;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:11px;
+	text-align:left;
+	text-decoration:none;*/
+}
+#top {
+	height:107px;
+	width:900px;
+	position:relative;
+	background:url(../ima/fondo_cabecera.jpg);
+}
+.titulo {
+	/*width:450px;
+	margin:25px 0 0 0;
+	text-align:left;
+	float:right;*/
+color:#474747;
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:14px;
+font-weight:bold;
+text-align:left;
+text-decoration:none;
+
+}
+.clear {
+	clear:both;
+}
+#tab{ 
+	font-size:12px;
+	clear:both;
+	margin-top:30px;
+	width:500px;
+	height:auto;
+	float:left;
+	
+/*padding:15px;*/
+
+}
+.tab_micro{
+	font-size:11px;	
+	text-align:left;
+	
+}
+.cb1{
+	width:350px;
+	float:left;	
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:12px;
+	color:#626262;
+}
+.cb2{
+	width:450px;
+	float:left;	
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:12px;
+	color:#626262;
+}
+.leyenda{
+	margin:0;
+	color:#626262;
+	font-size:11px;	
+}
+.textos{
+	
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:12px;
+	color:#626262;
+}
+.pinta1{
+}
+
+.pinta2{
+	background-color:#F5F5F5
+}
+.texto_cabecera_tabla {
+color:#FF9900;
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+text-align:left;
+text-decoration:none;
+}
+
+.borde{
+border:1px solid #999999;
+/*cellspacing:0px;
+cellpadding:0px; */
+width:500px;
+height:auto;
+float:left;
+padding:15px;
+clear:both;
+}
+.borde_tabla1{
+border-bottom:1px solid #CCCCCC;
+border-right:1px solid #CCCCCC;
+}
+.borde_tabla2{
+border-bottom:1px solid #CCCCCC;
+}
+.borde_tabla_filas{
+border-right:1px solid #CCCCCC;
+}
+.formu{
+
+clear:both;
+float:left;}
+
+.micabezera
+{
+	float:left;
+	margin-left:-1px;
+	width:895px;
+/*	width:865px;*/
+	height:auto;
+}
