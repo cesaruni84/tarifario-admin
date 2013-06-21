@@ -79,8 +79,11 @@ function buscarTasa(){
 					//Construye grilla dinamica
 					jQuery("#grillaPanel").jqGrid({	
 						datatype: "local",
+						//width: '100%',
+						//height: '100%',
 						width: 750,
-						height: 400,
+						height: 800,
+						rowNum: 200,
 						colNames:['Selecci&oacuten','Rango','Desde', 'Hasta','Desde','Hasta','Descripcion','Min (%)','Max (%)','Unidad'],
 						colModel:[
 							{name:'seleccion', index:'seleccion', width:80, sorttype:'int' ,formatter: 'checkbox' ,align: 'center', edittype: "checkbox",formatoptions: {disabled: false}},
@@ -100,7 +103,7 @@ function buscarTasa(){
 					   	grouping:true,
 					   	groupingView : {
 					   		groupField : ['descripcion'],
-					   		groupColumnShow : [false],
+					   		groupColumnShow : true,
 					   		groupOrder : ['asc'] ,
 					   		groupText : ['<b>{0}</b>']
 					   	},
