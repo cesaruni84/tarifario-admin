@@ -232,6 +232,7 @@ p {
 
 #opciones-grilla{
 	width:100px;
+	height:800px;
 	float: right;
 	margin-right:110px;
 }
@@ -242,10 +243,11 @@ p {
 }
 
 #cuerpo-centro-tabla{
-	height:300px;
+	height:600px;
 	width:100%;
 	color:#000;
 	margin-left:90px;
+	margin-bootom:50px;
 	padding:0;
 }
 
