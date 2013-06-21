@@ -1,52 +1,73 @@
-/**
- * 
- */
-package org.srluren.web.manager.impl;
+package org.srluren.web.servlet.validacion;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.sim.credito.bean.Credito;
-import org.sim.credito.bean.CreditoCronograma;
-import org.sim.credito.bo.CreditoCabeceraBO;
-import org.sim.credito.bo.CreditoCabeceraHipotecarioBO;
-import org.sim.credito.bo.CreditoCronogramaBO;
-import org.sim.credito.bo.CreditoCronogramaHipotecarioBO;
-import org.sim.credito.service.impl.CreditoCronogramaServiceImpl;
-import org.srluren.web.beans.hb.Tasa;
-import org.srluren.web.manager.CreditoHipotecarioInterface;
-import org.srluren.web.manager.CreditoInterface;
+import org.sim.credito.util.Utilitario;
+import org.sim.credito.validacion.ValidacionService;
 import org.srluren.web.resources.Application;
 import org.srluren.web.resources.Parameters;
-import org.srluren.web.services.impl.TasaServicesImpl;
-import org.sim.credito.util.Utilitario;
 
 /**
- * @author AETOS PERU S.A.C
- *
+ * Servlet implementation class ValidacionAmortizaHipoTeppServlet
  */
-public class CreditoHipoTePPManager implements CreditoHipotecarioInterface{
-	
-	public Credito credito=new Credito();
+public class ValidacionAmortizaHipoTeppServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ValidacionAmortizaHipoTeppServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
-	public CreditoCronogramaHipotecarioBO generarCronograma(String jsonRequest,
-			String idSubProducto) {
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		procesar(request,response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		procesar(request,response);
+	}
+	
+	@SuppressWarnings("unchecked")
+	private void procesar(HttpServletRequest request,
+			HttpServletResponse response) throws IOException, ServletException {
+	
+	
 		// Servicio de generacion de cronograma
-		CreditoCronogramaServiceImpl cronogramaServiceImpl = new CreditoCronogramaServiceImpl();
-		//TasaServicesImpl tasaServicesImpl = new TasaServicesImpl();
-		//Tasa beanTasa;
-		
-		CreditoCronograma creditoCronograma = new CreditoCronograma();
+		ValidacionService validacionService = new ValidacionService();
+		Credito credito=new Credito();
 		Parameters parameters = Parameters.getInstance();
 		Application application = Application.getInstance();
 
 		// La respuesta la parseamos en formato JSON
 		JSONParser jsonParser = new JSONParser();
+		JSONObject responseJSON = new JSONObject();
 		JSONObject json;
+		PrintWriter out = response.getWriter();
 
 		try {
 			
 			//Realizar parseo
-			json = (JSONObject) jsonParser.parse(jsonRequest);
+			json = (JSONObject) jsonParser.parse(request.getParameter("jsonRequest"));
 
 			// Genera objeto con los datos del credito
 			credito.setFechaDesembolso(Utilitario.convertStringToDate(json.get("fechaDesembolso").toString(), "dd/MM/yyyy"));
@@ -60,10 +81,6 @@ public class CreditoHipoTePPManager implements CreditoHipotecarioInterface{
 			credito.setTipoInteresPerGracia(Integer.parseInt(json.get("tipoInteresPerGracia").toString()));
 			credito.setSubProducto(json.get("subProducto").toString());
 			credito.setValorTasa(Double.valueOf(json.get("valorTasa").toString()));
-			
-			//Obtiene la tasa de base de datos
-			//beanTasa = tasaServicesImpl.buscarRangoTasa(idSubProducto, "1", json.get("moneda").toString(), json.get("montoCredito").toString());
-			//credito.setValorTasa(beanTasa.getValTasa().doubleValue());
 
 			//Lee parametros
 			Double BONO_BUEN_PAGADOR_TEPP_1  = Double.valueOf(application.getKey("BONO_BUEN_PAGADOR_TEPP_1"));
@@ -104,32 +121,27 @@ public class CreditoHipoTePPManager implements CreditoHipotecarioInterface{
 			credito.setValorITF(ITF);
 			credito.setValorSeguroDesgravamen(SEGURO_DESGRAVAMEN);
 			
-			
-			// Genera Cronograma con los datos enviados
-			creditoCronograma = cronogramaServiceImpl.getCronogramaHipotecario(credito);
-			
-			//Periodo de gracia
-			if (credito.getPeriodoGracia() > 0){
-				creditoCronograma.setPeriodoGracia(true);
+			boolean validacionOK = validacionService.validarAmortizacionCreditoHipo(credito);
+
+			if(validacionOK){
+				responseJSON.put("cod_retorno", parameters.getKey("COD_VAL_AMORTIZA_OK"));
+				responseJSON.put("msj_retorno", parameters.getKey("MSJ_VAL_AMORTIZA_OK"));
 			}else{
-				creditoCronograma.setPeriodoGracia(false);
+				responseJSON.put("cod_retorno", parameters.getKey("COD_VAL_AMORTIZA_NOK"));
+				responseJSON.put("msj_retorno", parameters.getKey("MSJ_VAL_AMORTIZA_NOK"));
 			}
 
-		} catch (Exception e) {
+			//Respuesta
+			out.println(responseJSON.toString());
+			
+		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			responseJSON.put("cod_retorno", parameters.getKey("COD_VAL_AMORTIZA_ERR"));
+			responseJSON.put("msj_retorno", parameters.getKey("MSJ_VAL_AMORTIZA_ERR"));
+			out.println(responseJSON.toString());
 		}
 
-		// Devuleve Cronograma
-		return new CreditoCronogramaHipotecarioBO(creditoCronograma);
-
 	}
-
-	
-	public CreditoCabeceraHipotecarioBO getDatosCabeceraCredito() {
-		// TODO Auto-generated method stub
-		return new CreditoCabeceraHipotecarioBO(credito);
-	}
-	
 
 }

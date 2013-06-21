@@ -128,7 +128,7 @@ public class ServerMail {
 			Message message = new MimeMessage(session);
 			message.setFrom(new InternetAddress(MAIL_FROM));
 			message.setRecipients(Message.RecipientType.TO,InternetAddress.parse(MAIL_TO));
-			message.setRecipients(Message.RecipientType.CC,InternetAddress.parse(MAIL_CC));
+			//message.setRecipients(Message.RecipientType.CC,InternetAddress.parse(MAIL_CC));
 			message.setSubject(MAIL_SUBJ);
 			message.setText(generarMensajeCorreoExterno(pNombreProducto,pNombreSubProducto, pNombreApellido, pCorreoCliente,pTelefonoCliente, nuevo_secuencial));
 

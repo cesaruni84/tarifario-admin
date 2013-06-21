@@ -13,5 +13,35 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/apache-commons-lang.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/commons-beanutils-1.8.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/commons-configuration-1.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/commons-digester-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/commons-javaflow-20060411.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/cos.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/ezmorph-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/groovy-all-1.7.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/hibernate3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/iText-2.1.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/jasperreports-4.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/jasperreports-fonts-4.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/jasperreports-javaflow-4.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/javassist-3.9.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/log4j.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/png-encoder-1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/poi-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/slf4j-log4j12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/jta.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Cesar/Proyectos/SeñorLuren/Otros/LibreriasWeb/SimuladorPagos.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

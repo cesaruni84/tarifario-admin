@@ -268,7 +268,7 @@ div#users-contain table td,div#users-contain table th {
 				$.ajax({
 					type: 'get',
 					data : "jsonRequest="+json_,
-					url : './validarMontosServlet',
+					url : './validarMontosHipoServlet',
 					success : function(response) {
 
 						//Obteniendo respuesta
@@ -348,7 +348,7 @@ div#users-contain table td,div#users-contain table th {
 				$.ajax({
 					type: 'get',
 					data : "jsonRequest="+json_,
-					url : './validarMontosServlet',
+					url : './validarMontosHipoServlet',
 					success : function(response) {
 
 						//Obteniendo respuesta
@@ -454,8 +454,31 @@ div#users-contain table td,div#users-contain table th {
 					var mensaje = json_resp.msj_retorno;
 					
 					if(codigo == 0){
-						//Envia informacion al servidor para generar el cronograma
-						window.location.href =  './genCronoHipoMivvServlet?jsonRequest='+ json;
+
+						//Validacion de amortizacion
+						$.ajax({
+							type: 'get',
+							data : "jsonRequest="+json,
+							url : './validacionAmortizaHipoServlet',
+							success : function(response_) {
+
+								//Obteniendo respuesta
+								var json_resp_ = $.parseJSON(response_);
+								var codigo_ = json_resp_.cod_retorno;
+								var mensaje_ = json_resp_.msj_retorno;
+								
+								if(codigo_ != 0){
+									alert(mensaje_);		
+								}else{
+									//Envia informacion al servidor para generar el cronograma
+									window.location.href =  './genCronoHipoMivvServlet?jsonRequest='+ json;
+								}
+							},
+							error : function(response) {
+								alert(response);
+							}
+						});	
+
 					}else{
 						alert(mensaje);	
 					}	
