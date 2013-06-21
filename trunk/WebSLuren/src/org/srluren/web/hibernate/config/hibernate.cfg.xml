@@ -7,7 +7,7 @@
 	  <!-- Parámetros de conexión a la base de datos SQL Server2008  -->
 	  <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
 	  <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
-	  <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=DBINTRANET</property>
+	  <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=DBTARIFARIO</property>
 	  <property name="hibernate.connection.username">usrluren</property>
 	  <property name="hibernate.connection.password">12345678</property>
 	  

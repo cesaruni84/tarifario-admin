@@ -440,14 +440,14 @@ div#users-contain table td,div#users-contain table th {
 																	<tr>
 																		<td><label for="valorInmueble_res" style="margin-top:5px;float:left;"><b>Valor del Inmueble : <br></label></td>
 																		<td><input type="text" name="valorInmueble_res" id="valorInmueble_res" size="30" class="text ui-widget-content" value="<%=request.getAttribute("valorInmueble")%>" style="border:none"></td>
-																		<td><label for="montoCredito_res" style="margin-top:5px;float:left;"><b>Monto del <br>Préstamo : <br></label></td>
-																		<td><input type="text" name="montoCredito_res" id="montoCredito_res" size="30" class="text ui-widget-content" value="<%=request.getAttribute("montoPrestamo")%>" style="border:none"></td>
+																		<td><label for="montoCredito_res" style="margin-top:5px;float:left;"><b>Total a <br>Financiar : <br></label></td>
+																		<td><input type="text" name="montoCredito_res" id="montoCredito_res" size="30" class="text ui-widget-content" value="<%=request.getAttribute("totalRecibir")%>" style="border:none"></td>
 																	</tr>
 																	
 																	<tr>
 																		<td><label for="bonoHipotecario_res" style="margin-top:5px;float:left;"><b>Bono : <br></label></td>
 																		<td><input type="text" name="bonoHipotecario_res" id="bonoHipotecario_res" size="30" class="text ui-widget-content" value="<%=request.getAttribute("bonoHipotecario")%>" style="border:none"></td>
-																		<td><label for="totalRecibir_res" style="margin-top:5px;float:left;"><b>Total a recibir : <br></label></td>
+																		<td><label for="totalRecibir_res" style="margin-top:5px;float:left;"><b>Monto del Préstamo : <br></label></td>
 																		<td><input type="text" name="totalRecibir_res" id="totalRecibir_res" size="30" class="text ui-widget-content" value="<%=request.getAttribute("montoPrestamo")%>" style="border:none"></td>
 																	</tr>
 																	

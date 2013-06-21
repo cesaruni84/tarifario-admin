@@ -492,9 +492,57 @@
     <servlet-name>ListarRangoTasaServlet</servlet-name>
     <url-pattern>/listarRangoTasaServlet</url-pattern>
   </servlet-mapping>
-  
   <session-config>
-  	<session-timeout>720</session-timeout>
+    <session-timeout>720</session-timeout>
   </session-config>
-  
+  <servlet>
+    <description></description>
+    <display-name>ValidarMontosHipoServlet</display-name>
+    <servlet-name>ValidarMontosHipoServlet</servlet-name>
+    <servlet-class>org.srluren.web.servlet.tasa.ValidarMontosHipoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ValidarMontosHipoServlet</servlet-name>
+    <url-pattern>/validarMontosHipoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ValidarMontosHipoTePPServlet</display-name>
+    <servlet-name>ValidarMontosHipoTePPServlet</servlet-name>
+    <servlet-class>org.srluren.web.servlet.tasa.ValidarMontosHipoTePPServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ValidarMontosHipoTePPServlet</servlet-name>
+    <url-pattern>/validarMontosHipoTePPServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ValidacionAmortizaServlet</display-name>
+    <servlet-name>ValidacionAmortizaServlet</servlet-name>
+    <servlet-class>org.srluren.web.servlet.validacion.ValidacionAmortizaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ValidacionAmortizaServlet</servlet-name>
+    <url-pattern>/validacionAmortizaServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ValidacionAmortizaHipoServlet</display-name>
+    <servlet-name>ValidacionAmortizaHipoServlet</servlet-name>
+    <servlet-class>org.srluren.web.servlet.validacion.ValidacionAmortizaHipoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ValidacionAmortizaHipoServlet</servlet-name>
+    <url-pattern>/validacionAmortizaHipoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ValidacionAmortizaHipoTeppServlet</display-name>
+    <servlet-name>ValidacionAmortizaHipoTeppServlet</servlet-name>
+    <servlet-class>org.srluren.web.servlet.validacion.ValidacionAmortizaHipoTeppServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ValidacionAmortizaHipoTeppServlet</servlet-name>
+    <url-pattern>/validacionAmortizaHipoTeppServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -99,6 +99,10 @@ public class GenCronoHipoMivvServlet extends HttpServlet {
 		//Lista de cuota
 		request.setAttribute("listaCuotasCredito", listaCuotasCredito);
 		
+		//Cuota cuota_eval0 =listaCuotasCredito.get(0);
+		
+		//if(cuota_eval0.getMontoCapital()<0){}
+		
 		//Redirecciona a pagina
 		RequestDispatcher dispatcher;
 		if (creditoCronogramaHipotecarioBO.isPeriodoGracia()){
